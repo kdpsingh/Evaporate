@@ -114,7 +114,7 @@ public class gbm_pojo_test {
   // main prediction (class for classifiers or value for regression),
   // and remaining columns hold a probability distribution for classifiers.
   public final double[] score0( double[] data, double[] preds ) {
-	java.util.Arrays.fill(preds,0);
+    java.util.Arrays.fill(preds,0);
     gbm_pojo_test_Forest_0.score0(data,preds);
     gbm_pojo_test_Forest_1.score0(data,preds);
     gbm_pojo_test_Forest_2.score0(data,preds);

@@ -22,8 +22,8 @@ class GenMod {
         return (preds[2] >= threshold) ? 1 : 0;
     }
     static getPredictionMultinomial(preds, priorClassDist, data) {
-        const ties = (new java.util.ArrayList());
-        ties.add(0);
+        var ties = ([]);
+        ties.push(0);
         let best = 1;
         let tieCnt = 0;
         for (let c = 2; c < preds.length; c++) {
@@ -34,7 +34,7 @@ class GenMod {
                 }
                 else if (preds[best] === preds[c]) {
                     tieCnt++;
-                    ties.add(c - 1);
+                    ties.push(c - 1);
                 }
             }
             ;
@@ -99,7 +99,6 @@ class gbm_pojo_test {
         return /* toString */ ('' + (916966837873556288));
     }
     score0(data, preds) {
-        java.util.Arrays.fill(preds, 0);
         gbm_pojo_test_Forest_0.score0(data, preds);
         gbm_pojo_test_Forest_1.score0(data, preds);
         gbm_pojo_test_Forest_2.score0(data, preds);
@@ -1283,3 +1282,6 @@ gbm_pojo_test_ColInfo_10.__static_initialize();
 gbm_pojo_test_ColInfo_9.__static_initialize();
 gbm_pojo_test_ColInfo_6.__static_initialize();
 NamesHolder_gbm_pojo_test.__static_initialize();
+
+// export class
+exports.gbm_pojo_test = gbm_pojo_test;

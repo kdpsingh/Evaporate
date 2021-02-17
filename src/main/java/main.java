@@ -4,9 +4,9 @@ import java.util.Arrays;
 public class main {
 
   public static void main(String[] args) throws Exception {
-    GLM_model_python_1613488863363_1 m = new GLM_model_python_1613488863363_1();
+    DRF_model_python_1613526296143_1 m = new DRF_model_python_1613526296143_1();
 
-    double[] r = {80, 1, 2.6, 2};
+    double[] r = {10.0, 10.3, 10.3, 1.2, 89};
 
     double[] rawData = new double[m.nfeatures()];
     Arrays.fill(rawData, Double.NaN);

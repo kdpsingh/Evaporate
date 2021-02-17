@@ -1,9 +1,12 @@
 /* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 /**
+ * ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ * JAKE'S EDITS (REMOVED MOST CALLS TO H2O CLASSES!!)
+ * ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
  * This is a helper class to support Java generated models.
  * @class
  */
-class GenModelEva {
+class GenModel {
     static correctProbabilities(scored, priorClassDist, modelClassDist) {
         let probsum = 0;
         for (let c = 1; c < scored.length; c++) {
@@ -34,18 +37,18 @@ class GenModelEva {
      */
     static getPrediction(preds, priorClassDist, data, threshold) {
         if (preds.length === 3) {
-            return GenModelEva.getPredictionBinomial(preds, threshold);
+            return GenModel.getPredictionBinomial(preds, threshold);
         }
         else {
-            return GenModelEva.getPredictionMultinomial(preds, priorClassDist, data);
+            return GenModel.getPredictionMultinomial(preds, priorClassDist, data);
         }
     }
     static getPredictionBinomial(preds, threshold) {
         return (preds[2] >= threshold) ? 1 : 0;
     }
     static getPredictionMultinomial(preds, priorClassDist, data) {
-        const ties = (new java.util.ArrayList());
-        ties.add(0);
+        const ties = ([]);
+        ties.push(0);
         let best = 1;
         let tieCnt = 0;
         for (let c = 2; c < preds.length; c++) {
@@ -56,7 +59,7 @@ class GenModelEva {
                 }
                 else if (preds[best] === preds[c]) {
                     tieCnt++;
-                    ties.add(c - 1);
+                    ties.push(c - 1);
                 }
             }
             ;
@@ -111,7 +114,7 @@ class GenModelEva {
     static Kmeans_preprocessData$double_A$double_A$double_A$int_A(data, means, mults, modes) {
         for (let i = 0; i < data.length; i++) {
             {
-                data[i] = GenModelEva.Kmeans_preprocessData$double$int$double_A$double_A$int_A(data[i], i, means, mults, modes);
+                data[i] = GenModel.Kmeans_preprocessData$double$int$double_A$double_A$int_A(data[i], i, means, mults, modes);
             }
             ;
         }
@@ -133,10 +136,10 @@ class GenModelEva {
     }
     static Kmeans_preprocessData(d, i, means, mults, modes) {
         if (((typeof d === 'number') || d === null) && ((typeof i === 'number') || i === null) && ((means != null && means instanceof Array && (means.length == 0 || means[0] == null || (typeof means[0] === 'number'))) || means === null) && ((mults != null && mults instanceof Array && (mults.length == 0 || mults[0] == null || (typeof mults[0] === 'number'))) || mults === null) && ((modes != null && modes instanceof Array && (modes.length == 0 || modes[0] == null || (typeof modes[0] === 'number'))) || modes === null)) {
-            return GenModelEva.Kmeans_preprocessData$double$int$double_A$double_A$int_A(d, i, means, mults, modes);
+            return GenModel.Kmeans_preprocessData$double$int$double_A$double_A$int_A(d, i, means, mults, modes);
         }
         else if (((d != null && d instanceof Array && (d.length == 0 || d[0] == null || (typeof d[0] === 'number'))) || d === null) && ((i != null && i instanceof Array && (i.length == 0 || i[0] == null || (typeof i[0] === 'number'))) || i === null) && ((means != null && means instanceof Array && (means.length == 0 || means[0] == null || (typeof means[0] === 'number'))) || means === null) && ((mults != null && mults instanceof Array && (mults.length == 0 || mults[0] == null || (typeof mults[0] === 'number'))) || mults === null) && modes === undefined) {
-            return GenModelEva.Kmeans_preprocessData$double_A$double_A$double_A$int_A(d, i, means, mults);
+            return GenModel.Kmeans_preprocessData$double_A$double_A$double_A$int_A(d, i, means, mults);
         }
         else
             throw new Error('invalid overload');
@@ -146,7 +149,7 @@ class GenModelEva {
         let minSqr = javaemul.internal.DoubleHelper.MAX_VALUE;
         for (let cluster = 0; cluster < centers.length; cluster++) {
             {
-                const sqr = GenModelEva.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
+                const sqr = GenModel.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
                 if (sqr < minSqr) {
                     min = cluster;
                     minSqr = sqr;
@@ -161,7 +164,7 @@ class GenModelEva {
         let minSqr = javaemul.internal.DoubleHelper.MAX_VALUE;
         for (let cluster = 0; cluster < centers.length; cluster++) {
             {
-                distances[cluster] = GenModelEva.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
+                distances[cluster] = GenModel.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
                 if (distances[cluster] < minSqr) {
                     min = cluster;
                     minSqr = distances[cluster];
@@ -178,7 +181,7 @@ class GenModelEva {
         let inv_sum = 0;
         for (let cluster = 0; cluster < centers.length; cluster++) {
             {
-                dist[cluster] = GenModelEva.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
+                dist[cluster] = GenModel.KMeans_distance$double_A$double_A$java_lang_String_A_A(centers[cluster], point, domains);
                 sum += dist[cluster];
                 inv_sum += 1.0 / dist[cluster];
             }
@@ -247,10 +250,10 @@ class GenModelEva {
     }
     static KMeans_distance(center, point, modes, colSum, colSumSq) {
         if (((center != null && center instanceof Array && (center.length == 0 || center[0] == null || (typeof center[0] === 'number'))) || center === null) && ((point != null && point instanceof Array && (point.length == 0 || point[0] == null || (typeof point[0] === 'number'))) || point === null) && ((modes != null && modes instanceof Array && (modes.length == 0 || modes[0] == null || (typeof modes[0] === 'number'))) || modes === null) && ((colSum != null && colSum instanceof Array && (colSum.length == 0 || colSum[0] == null || (typeof colSum[0] === 'number'))) || colSum === null) && ((colSumSq != null && colSumSq instanceof Array && (colSumSq.length == 0 || colSumSq[0] == null || (typeof colSumSq[0] === 'number'))) || colSumSq === null)) {
-            return GenModelEva.KMeans_distance$double_A$float_A$int_A$double_A$double_A(center, point, modes, colSum, colSumSq);
+            return GenModel.KMeans_distance$double_A$float_A$int_A$double_A$double_A(center, point, modes, colSum, colSumSq);
         }
         else if (((center != null && center instanceof Array && (center.length == 0 || center[0] == null || (typeof center[0] === 'number'))) || center === null) && ((point != null && point instanceof Array && (point.length == 0 || point[0] == null || (typeof point[0] === 'number'))) || point === null) && ((modes != null && modes instanceof Array && (modes.length == 0 || modes[0] == null || modes[0] instanceof Array)) || modes === null) && colSum === undefined && colSumSq === undefined) {
-            return GenModelEva.KMeans_distance$double_A$double_A$java_lang_String_A_A(center, point, modes);
+            return GenModel.KMeans_distance$double_A$double_A$java_lang_String_A_A(center, point, modes);
         }
         else
             throw new Error('invalid overload');
@@ -292,7 +295,7 @@ class GenModelEva {
         return dsum;
     }
     static GBM_rescale(preds) {
-        const sum = GenModelEva.log_rescale(preds);
+        const sum = GenModel.log_rescale(preds);
         for (let k = 1; k < preds.length; k++) {
             preds[k] /= sum;
         }
@@ -311,7 +314,7 @@ class GenModelEva {
         return 1.0 / xx;
     }
     static GLM_ologitInv(x) {
-        return GenModelEva.GLM_logitInv(x);
+        return GenModel.GLM_logitInv(x);
     }
     static GLM_tweedieInv(x, tweedie_link_power) {
         return tweedie_link_power === 0 ? Math.max(2.0E-16, Math.exp(x)) : Math.pow(x, 1.0 / tweedie_link_power);
@@ -328,7 +331,7 @@ class GenModelEva {
             a.push(0); return a; })(_nums);
         const cats = (s => { let a = []; while (s-- > 0)
             a.push(0); return a; })(_cats);
-        GenModelEva.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
+        GenModel.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
         java.util.Arrays.fill(to, 0.0);
         for (let i = 0; i < _cats; ++i) {
             if (cats[i] >= 0)
@@ -340,7 +343,7 @@ class GenModelEva {
         }
     }
     static setInput$double_A$double_A$double_A$int_A$int$int$int_A$double_A$double_A$boolean$boolean(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels, replaceMissingWithZero) {
-        GenModelEva.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
+        GenModel.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
         java.util.Arrays.fill(to, 0.0);
         for (let i = 0; i < _cats; ++i) {
             if (cats[i] >= 0)
@@ -353,16 +356,16 @@ class GenModelEva {
     }
     static setInput(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels, replaceMissingWithZero) {
         if (((from != null && from instanceof Array && (from.length == 0 || from[0] == null || (typeof from[0] === 'number'))) || from === null) && ((to != null && to instanceof Array && (to.length == 0 || to[0] == null || (typeof to[0] === 'number'))) || to === null) && ((nums != null && nums instanceof Array && (nums.length == 0 || nums[0] == null || (typeof nums[0] === 'number'))) || nums === null) && ((cats != null && cats instanceof Array && (cats.length == 0 || cats[0] == null || (typeof cats[0] === 'number'))) || cats === null) && ((typeof _nums === 'number') || _nums === null) && ((typeof _cats === 'number') || _cats === null) && ((_catOffsets != null && _catOffsets instanceof Array && (_catOffsets.length == 0 || _catOffsets[0] == null || (typeof _catOffsets[0] === 'number'))) || _catOffsets === null) && ((_normMul != null && _normMul instanceof Array && (_normMul.length == 0 || _normMul[0] == null || (typeof _normMul[0] === 'number'))) || _normMul === null) && ((_normSub != null && _normSub instanceof Array && (_normSub.length == 0 || _normSub[0] == null || (typeof _normSub[0] === 'number'))) || _normSub === null) && ((typeof useAllFactorLevels === 'boolean') || useAllFactorLevels === null) && ((typeof replaceMissingWithZero === 'boolean') || replaceMissingWithZero === null)) {
-            return GenModelEva.setInput$double_A$double_A$double_A$int_A$int$int$int_A$double_A$double_A$boolean$boolean(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels, replaceMissingWithZero);
+            return GenModel.setInput$double_A$double_A$double_A$int_A$int$int$int_A$double_A$double_A$boolean$boolean(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels, replaceMissingWithZero);
         }
         else if (((from != null && from instanceof Array && (from.length == 0 || from[0] == null || (typeof from[0] === 'number'))) || from === null) && ((to != null && to instanceof Array && (to.length == 0 || to[0] == null || (typeof to[0] === 'number'))) || to === null) && ((typeof nums === 'number') || nums === null) && ((typeof cats === 'number') || cats === null) && ((_nums != null && _nums instanceof Array && (_nums.length == 0 || _nums[0] == null || (typeof _nums[0] === 'number'))) || _nums === null) && ((_cats != null && _cats instanceof Array && (_cats.length == 0 || _cats[0] == null || (typeof _cats[0] === 'number'))) || _cats === null) && ((_catOffsets != null && _catOffsets instanceof Array && (_catOffsets.length == 0 || _catOffsets[0] == null || (typeof _catOffsets[0] === 'number'))) || _catOffsets === null) && ((typeof _normMul === 'boolean') || _normMul === null) && ((typeof _normSub === 'boolean') || _normSub === null) && useAllFactorLevels === undefined && replaceMissingWithZero === undefined) {
-            return GenModelEva.setInput$double_A$float_A$int$int$int_A$double_A$double_A$boolean$boolean(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub);
+            return GenModel.setInput$double_A$float_A$int$int$int_A$double_A$double_A$boolean$boolean(from, to, nums, cats, _nums, _cats, _catOffsets, _normMul, _normSub);
         }
         else
             throw new Error('invalid overload');
     }
     static setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels) {
-        GenModelEva.setCats$double_A$int_A$int$int_A$boolean(from, cats, _cats, _catOffsets, useAllFactorLevels);
+        GenModel.setCats$double_A$int_A$int$int_A$boolean(from, cats, _cats, _catOffsets, useAllFactorLevels);
         for (let i = _cats; i < from.length; ++i) {
             {
                 let d = from[i];
@@ -376,10 +379,10 @@ class GenModelEva {
     }
     static setCats(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels) {
         if (((from != null && from instanceof Array && (from.length == 0 || from[0] == null || (typeof from[0] === 'number'))) || from === null) && ((nums != null && nums instanceof Array && (nums.length == 0 || nums[0] == null || (typeof nums[0] === 'number'))) || nums === null) && ((cats != null && cats instanceof Array && (cats.length == 0 || cats[0] == null || (typeof cats[0] === 'number'))) || cats === null) && ((typeof _cats === 'number') || _cats === null) && ((_catOffsets != null && _catOffsets instanceof Array && (_catOffsets.length == 0 || _catOffsets[0] == null || (typeof _catOffsets[0] === 'number'))) || _catOffsets === null) && ((_normMul != null && _normMul instanceof Array && (_normMul.length == 0 || _normMul[0] == null || (typeof _normMul[0] === 'number'))) || _normMul === null) && ((_normSub != null && _normSub instanceof Array && (_normSub.length == 0 || _normSub[0] == null || (typeof _normSub[0] === 'number'))) || _normSub === null) && ((typeof useAllFactorLevels === 'boolean') || useAllFactorLevels === null)) {
-            return GenModelEva.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
+            return GenModel.setCats$double_A$double_A$int_A$int$int_A$double_A$double_A$boolean(from, nums, cats, _cats, _catOffsets, _normMul, _normSub, useAllFactorLevels);
         }
         else if (((from != null && from instanceof Array && (from.length == 0 || from[0] == null || (typeof from[0] === 'number'))) || from === null) && ((nums != null && nums instanceof Array && (nums.length == 0 || nums[0] == null || (typeof nums[0] === 'number'))) || nums === null) && ((typeof cats === 'number') || cats === null) && ((_cats != null && _cats instanceof Array && (_cats.length == 0 || _cats[0] == null || (typeof _cats[0] === 'number'))) || _cats === null) && ((typeof _catOffsets === 'boolean') || _catOffsets === null) && _normMul === undefined && _normSub === undefined && useAllFactorLevels === undefined) {
-            return GenModelEva.setCats$double_A$int_A$int$int_A$boolean(from, nums, cats, _cats, _catOffsets);
+            return GenModel.setCats$double_A$int_A$int$int_A$boolean(from, nums, cats, _cats, _catOffsets);
         }
         else
             throw new Error('invalid overload');
@@ -417,6 +420,5 @@ class GenModelEva {
         return output;
     }
 }
-GenModelEva["__class"] = "GenModelEva";
-
-exports.GenModelEva = GenModelEva;
+GenModel["__class"] = "GenModel";
+exports.GenModel=GenModel;

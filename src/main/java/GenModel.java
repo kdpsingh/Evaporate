@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.*;
 
 /**
+ * ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+ * JAKE'S EDITS (REMOVED MOST CALLS TO H2O CLASSES!!)
+ * ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
  * This is a helper class to support Java generated models.
  */
 public abstract class GenModel {

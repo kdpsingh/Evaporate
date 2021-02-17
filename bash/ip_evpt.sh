@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# does the same thing as evpt_bash, except we keep the changes in place
+# i.e. we overwrite the same file
+
 pojo_filter_in_place () {
 	sed -i '/.*super.*(.*)/d' 	 $1	# delete line with super() function
 	sed -i '/^@ModelPojo/d'		 $1	# delete @ModelPojo override

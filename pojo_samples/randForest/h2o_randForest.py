@@ -33,8 +33,8 @@ perf = cars_drf.model_performance()
 
 # Generate predictions on a validation set (if necessary):
 pred = cars_drf.predict(valid)
-print(pred)
+# print(pred)
 
 # print out training data
-# h2o.download_pojo(cars_drf, os.getcwd())
+h2o.download_pojo(cars_drf, os.getcwd())
 

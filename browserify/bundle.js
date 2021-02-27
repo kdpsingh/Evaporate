@@ -688,7 +688,7 @@ glm_model.BETA.__static_initialize();
 exports.glm_model=glm_model;
 
 },{"./GenModel.js":1}],3:[function(require,module,exports){
-const {glm_model} = require("./glm_model");
+const {glm_model} = require("./classes/glm_model");
 document.getElementById("h2oCalc").addEventListener("click", h2o_calculate);
 
 function h2o_calculate() {
@@ -713,4 +713,4 @@ function h2o_calculate() {
 	document.getElementById("p1").innerHTML = "p1: " + p[2];
 }
 
-},{"./glm_model":2}]},{},[3]);
+},{"./classes/glm_model":2}]},{},[3]);

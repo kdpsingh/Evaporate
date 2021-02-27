@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Getting Cozy with Browserify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+      h1, p, div { text-align: center; }
+      html       { background: #fffffe; }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <h2>Welcome to the Client Side.</h2>
+
+      <div class="well">
+        <p>I see you've got some numbers. Why not let me see them?</p>
+
+        <div id="response"></div>
+        <div id="pr"></div>
+        <div id="p0"></div>
+        <div id="p1"></div>
+      </div>
+    </div>
+
+    <div class="h2o">
+      <h2>Enter Your:</h2>
+      <label for="race">RACE</label>
+      <input type="text" id="race" value="0">     </br>
+      <label for="age">AGE</label>
+      <input type="text" id="age" value="0">      </br>
+      <label for="psa">PSA</label>
+      <input type="text" id="psa" value="0">      </br>
+      <label for="gleason">GLEASON</label>
+      <input type="text" id="gleason" value="0">  </br> </br>
+      <p id="h2oCalc">H2O Calculate!</p>
+    </div>>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

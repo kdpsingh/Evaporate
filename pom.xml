@@ -80,6 +80,7 @@
 					<verbose>true</verbose>
 					<outDir>target/js</outDir>
 					<tsOut>target/ts</tsOut>
+					<bundle>true</bundle>
 					<targetVersion>ES6</targetVersion>
 					<module>none</module>
 					<moduleResolution>classic</moduleResolution>

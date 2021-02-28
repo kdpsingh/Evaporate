@@ -6,7 +6,7 @@ cd into this directory and in your command line, run: </br>
 > ./brow.sh ../classes/glm_model.js
 ```
 
-Once you ran this run, your directory should have 3 new files: </br>
+Once you ran this command, your directory should have 3 new files: </br>
 
 1. index.html
 1. bundle.js

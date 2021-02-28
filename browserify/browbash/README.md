@@ -14,5 +14,5 @@ Once you ran this run, your directory should have 3 new files: </br>
 
 Simply click open the index.html and you should be able to play with the newly-generated HTML by entering in the corresponding values and clicking on the 'H2O Calculate!' button </br>
 
-...and if nothing works, sample/ contains a working index.html/main.js/bundle.js :P
+(...and if nothing works, sample/ contains a working index.html/main.js/bundle.js :P)
 

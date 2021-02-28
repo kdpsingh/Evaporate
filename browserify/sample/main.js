@@ -1,4 +1,4 @@
-const {glm_model} = require("./classes/glm_model");
+const {glm_model} = require("./glm_model");
 document.getElementById("h2oCalc").addEventListener("click", h2o_calculate);
 
 function h2o_calculate() {

@@ -1,4 +1,3 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 /* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 /**
  * ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -422,11 +421,6 @@ class GenModel {
     }
 }
 GenModel["__class"] = "GenModel";
-exports.GenModel=GenModel;
-
-},{}],2:[function(require,module,exports){
-const {GenModel}=require("./GenModel.js");
-/* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 class glm_model {
     isSupervised() {
         return true;
@@ -679,38 +673,19 @@ glm_model_ColInfo_4["__interfaces"] = ["java.io.Serializable"];
     glm_model_ColInfo_4_0["__class"] = "glm_model_ColInfo_4.glm_model_ColInfo_4_0";
     glm_model_ColInfo_4_0["__interfaces"] = ["java.io.Serializable"];
 })(glm_model_ColInfo_4 || (glm_model_ColInfo_4 = {}));
+glm_model_ColInfo_4.VALUES_$LI$();
 glm_model_ColInfo_4.__static_initialize();
+glm_model_ColInfo_0.VALUES_$LI$();
 glm_model_ColInfo_0.__static_initialize();
+NamesHolder_glm_model.VALUES_$LI$();
 NamesHolder_glm_model.__static_initialize();
+glm_model.CAT_MODES.VALUES_$LI$();
 glm_model.CAT_MODES.__static_initialize();
+glm_model.NUM_MEANS.VALUES_$LI$();
 glm_model.NUM_MEANS.__static_initialize();
+glm_model.BETA.VALUES_$LI$();
 glm_model.BETA.__static_initialize();
+glm_model.CATOFFS_$LI$();
+glm_model.DOMAINS_$LI$();
+glm_model.NAMES_$LI$();
 exports.glm_model=glm_model;
-
-},{"./GenModel.js":1}],3:[function(require,module,exports){
-const {glm_model} = require("./classes/glm_model");
-document.getElementById("h2oCalc").addEventListener("click", h2o_calculate);
-
-function h2o_calculate() {
-	let m = new glm_model();
-	pred = new Array(3).fill(0);
-
-	var race = document.getElementById("race").value;
-	var age = document.getElementById("age").value;
-	var psa = document.getElementById("psa").value;
-	var gleason = document.getElementById("gleason").value;
-
-	race = parseFloat(race);
-	age = parseFloat(age);
-	psa = parseFloat(psa);
-	gleason = parseFloat(gleason);
-
-	input = [race, age, psa, gleason];
-	p = m.score0(input, pred);
-
-	document.getElementById("pr").innerHTML = "predict: " + p[0];
-	document.getElementById("p0").innerHTML = "p0: " + p[1];
-	document.getElementById("p1").innerHTML = "p1: " + p[2];
-}
-
-},{"./classes/glm_model":2}]},{},[3]);

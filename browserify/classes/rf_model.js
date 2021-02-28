@@ -1,4 +1,3 @@
-const {GenModel}=require("./GenModel.js");
 /* Generated from Java with JSweet 3.0.0 - http://www.jsweet.org */
 class rf_model {
     isSupervised() {

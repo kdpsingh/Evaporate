@@ -36,5 +36,4 @@ pred = cars_drf.predict(valid)
 # print(pred)
 
 # print out training data
-h2o.download_pojo(cars_drf, os.getcwd())
-
+cars_drf.download_mojo(path=os.getcwd())

@@ -4,8 +4,6 @@ import hex.genmodel.easy.EasyPredictModelWrapper;
 import hex.genmodel.easy.prediction.*;
 import java.lang.Math;
 
-
-
 public class main {
   private static String modelClassName = "gbm_pojo_test";
 

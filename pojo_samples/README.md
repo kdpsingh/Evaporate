@@ -1,1 +1,2 @@
-This is the directory where I generte my POJOs
+# POJO Samples Directory
+This is the directory where I generate my POJOs

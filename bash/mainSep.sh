@@ -1,4 +1,5 @@
 #!/bin/bash
+# this main is for if you want a seperate GenModel file and your POJO (make sure you edit <bundle> to be false in pom.xml!)
 jsOut="${1%.*}.js" &&							# get file name for JS output
 cwd=$(pwd) &&								# get current work directory to put output back
 

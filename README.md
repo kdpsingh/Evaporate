@@ -22,4 +22,4 @@ To use this package, git clone this directory and follow these instructions: </b
 ```
 5. There should now be a new folder in this directory: browser/. There should see 3 files there: index.html, main.js, bundle.js
 6. Open index.html. You should now be able to generate H2O responses by entering in the corresponding variables
-7. Feel free to modify any of the files to tailor to your needs! Evaporate is <strong>not</strong> meant to be the final solution; it is simply the starting point to get you to be able to display and run your H2O code in the browser. Have fun playing!
+7. Feel free to modify any of the files to tailor to your needs! Evaporate is <strong>not</strong> meant to be the final solution; it is simply the starting point to get you to be able to display and run your H2O code in the browser. Have fun coding!

@@ -7,7 +7,9 @@
 # Instructions
 
 To use this package, git clone this directory and follow these instructions: </br>
-
+```
+> git clone https://github.com/ML4LHS/Evaporate.git
+```
 1. First, you need a H2O-generated POJO. For the sake of simplicity, we'll use the one already in this directory: gbm_pojo_test.java
 2. Move a copy of your POJO into this directory, and run main.sh in your command line: 
 ```

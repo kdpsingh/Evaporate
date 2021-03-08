@@ -17,10 +17,13 @@ bash/exports.sh target/js/$jsOut >> target/js/$jsOut;			# export JS class
 mv target/js/* "$cwd"; 							# move all JS files into original directory
 rm -rf target/;								# remove target directory
 rm src/main/java/*; 							# clean up src/main/java
-echo -e "\n${GREEN}A MESSAGE FROM THE EVAPORATE TEAM:${NC} Don't worry if JSweet outputs ${RED}BUILD FAILURE${NC}!!!\n\
+echo -e "\n${GREEN}A MESSAGE FROM THE EVAPORATE TEAM:\
+\n${NC}Don't worry if JSweet outputs ${RED}BUILD FAILURE${NC}!!!\
+\nIt means that the JavaScript file JSweet produced didn't compiled successfully;\
+\nusually, JSweet gets us about 85-90% there.\n\
 \n${GREEN}AND...AN EVEN LONGER MESSAGE:${NC} (c'mon, bear with us) \
 \nJSweet isn't by all means perfect, and the transpiled JavaScript might not run on the first try. \
 \nWe are aware of this fact and provided our customized modifications to the outputted JSweet code; \
 \nWe do our best to patched up common left-over Java code in JSweet-converted JavaScript files \
 \nso it might run on the first try. (All modifications are in ${CYAN}bash/jsweetFilter.sh${NC}) \
-\nPLEASE, feel free to add your own modifications too!"
+\nAnd YES: please feel free to add your own modifications too!"

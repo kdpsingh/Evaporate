@@ -33,5 +33,5 @@ To use this package, git clone this directory and follow these instructions: </b
 7. Feel free to modify any of the files to tailor to your needs! Evaporate is <strong>not</strong> meant to be the final solution; it is simply the starting point to get you to be able to display and run your H2O code in the browser. Have fun coding!
 
 # Modifying JSweet (pom.xml)
-The JSweet transpiler provides numerous options to customize the way your files are transpiled. The customizations lives in the pom.xml. For a list of all the options, visit: </br>
+The JSweet transpiler provides many more options to customize the way your files are transpiled. The customizations lives in the pom.xml. For a list of all the options, visit: </br>
 http://www.jsweet.org/getting-started/#Most_common_transpiler_options

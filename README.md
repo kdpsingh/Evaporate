@@ -5,14 +5,16 @@
 </ul>
 
 # Dependencies
-Make sure you have maven and node installed in order to run the bash commands: 
+Make sure you have maven, node, and browserify (which requires npm) installed in order to run the bash commands: 
 ```
 > sudo apt install maven
 ```
 ```
 > sudo apt install nodejs
 ```
-
+```
+> npm install --global browserify
+```
 # Instructions
 To use this package, git clone this directory and follow these instructions: </br>
 ```

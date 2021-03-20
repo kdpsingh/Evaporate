@@ -19,8 +19,8 @@ FAILURE="\n${RED}MAVEN DID NOT TRANSPILED SUCCESSFULLY. EVAPORATE.SH ABORT";
 NOT_BUNDLE="Oops. This bash script is for if the bundle option in pom.xml is set to True.\
 \nIf you want to keep the GenModel and the POJO files seperated, please use the bash/mainSep.sh script";
 
-if ! grep -q "<bundle>true</bundle>" pom.xml; then
-	echo -e "$NOT_BUNDLE";
+if ! grep -q "<bundle>true</bundle>" pom.xml; then			# early check since this script assumes the bundle option
+	echo -e "$NOT_BUNDLE";						# if not, exit 0
 	exit 0
 fi
 

@@ -14,8 +14,15 @@ SUCCESS="\n${GREEN}A MESSAGE FROM THE EVAPORATE TEAM:\
 \nWe are aware of this fact and provided our customized modifications to the outputted JSweet code; \
 \nWe do our best to patched up common left-over Java code in JSweet-converted JavaScript files \
 \nso it might run on the first try. (All modifications are in ${CYAN}bash/jsweetFilter.sh${NC}) \
-\nAnd YES: please feel free to add your own modifications too!"
-FAILURE="\n${RED}MAVEN DID NOT TRANSPILED SUCCESSFULLY. EVAPORATE.SH ABORT"
+\nAnd YES: please feel free to add your own modifications too!";
+FAILURE="\n${RED}MAVEN DID NOT TRANSPILED SUCCESSFULLY. EVAPORATE.SH ABORT";
+NOT_BUNDLE="Oops. This bash script is for if the bundle option in pom.xml is set to True.\
+\nIf you want to keep the GenModel and the POJO files seperated, please use the bash/mainSep.sh script";
+
+if ! grep -q "<bundle>true</bundle>" pom.xml; then
+	echo -e "$NOT_BUNDLE";
+	exit 0
+fi
 
 cp GenMod/GenModel.java src/main/java;					# move GenModel into src/main/java
 cp $1 src/main/java;							# move POJO into src/main/java

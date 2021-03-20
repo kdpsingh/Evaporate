@@ -19,5 +19,5 @@ sed -i "1 i\\$imp" gen_html.js;			# import JS class needed to generate HTML
 node gen_html.js > index.html;			# output HTML code
 node gen_main.js >> main.js;			# output main.js code
 browserify --debug main.js -o bundle.js;	# browserify the JS code 
-sed -i "/require/d" gen_main.js;		# remove the $imp line from file for reuse
-sed -i "/require/d" gen_html.js			# do the same for HTML gen code
+#sed -i "/require/d" gen_main.js;		# remove the $imp line from file for reuse
+#sed -i "/require/d" gen_html.js			# do the same for HTML gen code

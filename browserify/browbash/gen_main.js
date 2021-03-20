@@ -1,3 +1,4 @@
+const {gbm_pojo_test}=require("./gbm_pojo_test.js"); let m=new gbm_pojo_test(); let n=gbm_pojo_test.NAMES_$LI$();
 cn = [];
 for (var i = 0; i < n.length; i++)
     cn.push(n[i].toLowerCase());

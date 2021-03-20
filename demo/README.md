@@ -8,7 +8,7 @@ We wrote bash scripts to convert each POJO into JavaScript using JSweet, an open
 To convert the POJOs, change into the demo directory and run these commands:
 
 ```
-../bash/main.sh name_of_pojo
+../evaporate.sh name_of_pojo
 ```
 
 The JavaScript file should then be produced in the demo/ directory. You can run the main file corresponding to the model using node:

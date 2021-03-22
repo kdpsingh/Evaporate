@@ -38,5 +38,5 @@ To use this package, git clone this directory and follow these instructions: </b
 The JSweet transpiler provides many more options to customize the way your files are transpiled. The customizations lives in the pom.xml. For a list of all the options, visit: </br>
 http://www.jsweet.org/getting-started/#Most_common_transpiler_options
 <ul>
-<li><strong>bundle</strong>: in the pom.xml you can set the <bundle></bundle> option to <strong>True</strong> or <strong>False</strong>. The bundle option just means if you want to keep all your files seperated or together. Evaporte supports both.
+<li><strong>bundle</strong>: in the pom.xml you can set the &ltbundle>&lt/bundle> option to <strong>True</strong> or <strong>False</strong>. The bundle option just means if you want to keep all your files seperated or together. Evaporte supports both.
 </ul>
